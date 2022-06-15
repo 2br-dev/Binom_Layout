@@ -32,6 +32,10 @@ body{
 			z-index: 40;
 			
 			& nav{
+
+				& a{
+					line-height: 54px;
+				}
 				
 				display: flex;
 				height: 54px;
