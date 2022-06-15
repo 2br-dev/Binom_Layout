@@ -1,0 +1,12 @@
+// import framework
+@import './framework/materialize';
+
+// import parts
+@import './parts/media';
+@import './parts/custom_grid';
+@import './parts/helpers';
+@import './parts/typography';
+@import './parts/footer';
+
+// import pages
+@import './pages/main'

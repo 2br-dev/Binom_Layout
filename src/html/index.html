@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'Главная'})
+</head>
+<body>
+	<div class="scroller">
+		@@include('./parts/header.html')
+		<main>
+			<section id="hero">
+				<div class="container">
+					<div class="row">
+						<div class="col l6 m8 s12 offset-l3 offset-m2 center-align">
+							<div class="hero-top">
+								<h1>
+									<span class="name">Центр обучения и развития «Бином» –</span>
+									<span class="descriptor">
+										эффек&shy;тивное развитие личности и проектных команд
+									</span>
+								</h1>
+							</div>
+							<div class="hero-bottom">
+								От потенциала каждого к общим достижениям!
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="parallax lazy" data-src="/img/hero-top.jpg"></div>
+			</section>
+			<div class="pattern">
+				<section id="directions">
+					<div class="container">
+						<div class="row">
+							<div class="col s12 center-align">
+								<h2>Основные направления деятельности</h2>
+							</div>
+						</div>
+						<div class="row flex">
+							<div class="col l4 m6 s12">
+								<div class="direction-card">
+									<h3>Системное развитие команд</h3>
+									<ol>
+										<li>Анализ потенциала команд</li>
+										<li>Формирование системы стратегических целей команды</li>
+										<li>Проектирование сценариев развития команды</li>
+										<li>Система мониторинга достигнутых результатов</li>
+										<li>Постпрограммное сопровождение для обеспечения  устойчивой трансформации</li>
+									</ol>
+								</div>
+							</div>
+							<div class="col l4 m6 s12">
+								<div class="direction-card">
+									<h3>Лидерство: эффективность в эпоху перемен</h3>
+									<p>Образовательные треки для руководителей высшего звена</p>
+									<ol>
+										<li>Диагностика лидерского потенциала</li>
+										<li>Паттерны эффективного лидерства в эпоху предпринимательства</li>
+										<li>Менеджмент изменений</li>
+										<li>Формирование системы жизненного баланса лидера</li>
+									</ol>
+								</div>
+							</div>
+							<div class="col l4 m6 offset-m3 s12">
+								<div class="direction-card">
+									<h3>Технология личностной трансформации</h3>
+									<ol>
+										<li>Анализ ресурсов личности.</li>
+										<li>Построение сбалансированного жизненного трека</li>
+										<li>Отбор и интеграция лучших практик управления жизнью</li>
+										<li>Постпрограммное менторское сопровождение</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="stats">
+					<div class="container">
+						<div class="row flex">
+							@@loop('./parts/stat-entry.html', './data/stats.json')
+						</div>
+					</div>
+				</section>
+			</div>
+			<section id="parallax">
+				<div class="container">
+					<div class="row">
+						<div class="col l8 offset-l2 m10 offset-m1 s12 center-align">
+							Обучение ведут федеральные и региональные эксперты в области эффективной трансформации управленческих команд и развития потенциала личности. 
+						</div>
+					</div>
+				</div>
+				<div class="parallax lazy" data-src="/img/parallax.jpg"></div>
+			</section>
+			<section id="map-section">
+				<div id="map"></div>
+			</section>
+			<section id="feedback">
+				<div class="container">
+					<div class="row">
+						<div class="col s12 center-align">
+							<h2>Остались вопросы?</h2>
+						</div>
+						<div class="col xl6 offset-xl3 l8 offset-l2 m12">
+							<div class="row">
+								<div class="col m6 s12">
+									<div class="input-field">
+										<input type="text" placeholder="Фамилия, имя, отчество">
+										<label for="">Фамилия, имя, отчество</label>
+										<div class="indicator"></div>
+									</div>
+								</div>
+								<div class="col m6 s12">
+									<div class="input-field">
+										<input type="text" placeholder="Тема сообщения">
+										<label for="">Тема сообщения</label>
+										<div class="indicator"></div>
+									</div>
+								</div>
+								<div class="col s12">
+									<div class="input-field">
+										<textarea name="" id="" cols="30" rows="0" placeholder="Текст сообщения"></textarea>
+										<label for="">Текст сообщения</label>
+										<div class="indicator"></div>
+									</div>
+								</div>
+								<div class="col s12">
+									<p>
+										Пожалуйста, подтвердите Ваше согласие на сбор и обработку Ваших персональных данных в соответствии с нашей <a href="">Политикой конфиденциальности</a> и <a href="">Пользовательским соглашением</a>.
+									</p>
+								</div>
+								<div class="col m6 s12 align-left-m-up align-center-m-down margin">
+									<div class="check-field"><input type="checkbox" id="agree"><label for="agree">Согласиться и продолжить</label></div>
+								</div>
+								<div class="col m6 s12 align-right-m-up align-center-m-down margin">
+									<a href="" class="btn">Отправить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./parts/footer.html')
+	</div>
+	@@include('./parts/scripts.html')
+</body>
+</html>

@@ -1,0 +1,230 @@
+main{
+
+	transform-style: inherit;
+
+	& section{
+		
+		transform-style: inherit;
+
+		&#hero{
+			min-height: 80vmin;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			min-height: 80vh;
+
+			& .parallax{
+				height: 110%;
+				transform: translate3d(-50%, -50%, -2px) scale(3.1);
+			}
+
+			& .container{
+
+				overflow-x: hidden;
+				width: 100%;
+
+				& .hero-top{
+
+					& h1{
+						width: fit-content;
+						margin: auto;
+						padding: 40px;
+						position: relative;
+						color: #fff;
+						z-index: 1;
+						
+						&:before{
+							content: '';
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							width: 100%;
+							height: 100%;
+							transform: skewX(-25deg) translate(-60%, -50%);
+							background: rgba($primary, .7);
+							backdrop-filter: blur(20px);
+							z-index: -1;
+							border-radius: 30px;
+							min-width: 500px;
+							background-position: center;
+							
+							@media(min-width: $extra-large){
+								transform: skewX(-25deg) translate(-50%, -50%);
+							}
+						}
+
+						& span{
+							line-height: 1.2em;
+						}
+						
+						& .name{
+							display: block;
+						}
+	
+						& .descriptor{
+							display: block;
+
+							@media(max-width: $medium){
+								font-weight: 500;
+								font-size: .7em;
+							}
+						}
+					}
+				}
+				& .hero-bottom{
+					padding: 30px;
+					width: fit-content;
+					margin-left: auto;
+					margin-top: -30px;
+					position: relative;
+					color: $primary;
+					font-weight: 700;
+					z-index: 2;
+
+					&:before{
+						content: '';
+						display: block;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+						position: absolute;
+						transform: skewX(25deg);
+						border-radius: 30px;
+						background: $secondary;
+						z-index: -1;
+					}
+				}
+			}
+		}
+
+		&#directions{
+
+			& .col{
+
+				margin-bottom: 20px;
+
+				& .direction-card{
+
+					background: #fff;
+					height: 100%;
+					padding: 1vmax;
+					padding-left: 2vmax;
+					border-radius: 6px;
+					box-shadow: 0 2px 4px rgba(black, .2), 0 4px 8px rgba(black, .2);
+					position: relative;
+
+					&:before{
+						content: '';
+						display: block;
+						position: absolute;
+						top: .5vmax;
+						left: .5vmax;
+						width: 8px;
+						height: calc(100% - 1vmax);
+						border-radius: 4px;
+						background: $secondary;
+					}
+
+					& h3{
+						text-align: center;
+					}
+
+					& ol{
+						padding-left: 20px;
+					}
+				}
+			}
+
+		}
+
+		&:not(#hero){
+
+			padding: 4vmax 0;
+		}
+
+		&#stats{
+
+			& .stat-entry{
+
+				text-align: center;
+				margin-bottom: 20px;
+
+				& .stat-value{
+					color: $thirdery;
+					font-weight: 700;
+					font-size: 3rem;
+					padding: .5vmax 0;
+				}
+			}
+		}
+
+		&#parallax{
+
+			min-height: 24vmax;
+			display: flex;
+			align-items: center;
+			background-position: top center;
+			position: relative;
+			background-size: cover;
+			background-repeat: no-repeat;
+			
+			&:before{
+				position: absolute;
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				background: rgba($primary, .7);
+			}
+
+			& .container{
+				position: relative;
+				color: #fff;
+				font-weight: 700;
+				font-size: 2rem;
+			}
+
+			& .parallax{
+				height: 130%;
+				transform: translate3d(-50%, -50%, -.5px) scale(1.5);
+			}
+		}
+
+		&#map-section{
+
+			background: #fff;
+			padding: 0;
+
+			& #map{
+
+				height: 30vmax;
+				min-height: 60vh;
+
+				& .marker{
+
+					width: 0;
+					height: 0;
+					cursor: pointer;
+					
+					& .marker-element{
+						width: 30px;
+						height: 40px;
+						transform: translate(-50%, -100%);
+						background: url(/img/map-marker.svg);
+						background-repeat: no-repeat;
+						background-position: bottom center;
+						background-size: contain;
+					}
+
+				}
+			}
+		}
+	}
+
+	& .pattern{
+
+		background: #F9F9F9 url(/img/pattern.svg);
+	}
+}

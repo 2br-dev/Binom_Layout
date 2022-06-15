@@ -1,0 +1,32 @@
+[
+	{
+		"value": "76%",
+		"description": "процент достигаемости командных целей",
+		"class": "col xl2 l3 m6 s12 stat-entry"
+	},
+	{
+		"value": "85%",
+		"description": "процент достигаемости личных целей участников программ",
+		"class": "col xl2 l3 m6 s12 stat-entry"
+	},
+	{
+		"value": "9,1",
+		"description": "из 10-и – рейтинговая оценка обратной связи участников программ",
+		"class": "col xl2 l3 m6 s12 stat-entry"
+	},
+	{
+		"value": "10 000+",
+		"description": "участников образовательных программ",
+		"class": "col xl2 l3 m6 s12 stat-entry"
+	},
+	{
+		"value": "10+",
+		"description": "профильный профессиональный опыт спикеров программ",
+		"class": "col xl2 l3 m6 s12 stat-entry offset-l3"
+	},
+	{
+		"value": "350+",
+		"description": "результативных методик и инструментов трансформациицент",
+		"class": "col xl2 l3 m6 s12 stat-entry"
+	}
+]
